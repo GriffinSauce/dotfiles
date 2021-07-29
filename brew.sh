@@ -35,6 +35,10 @@ fi;
 # Install starship prompt
 brew install starship
 
+# Install Fira Code nerd font
+brew tap homebrew/cask-fonts
+brew install font-Fira-Code-nerd-font
+
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
