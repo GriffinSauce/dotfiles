@@ -183,7 +183,7 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # Finder: show status bar
-defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder ShowStatusBar -bool false
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
@@ -495,8 +495,17 @@ EOD
 # Install the Dracula theme for iTerm
 open "${HOME}/init/Dracula.itermcolors"
 
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.config/iterm2/preferences"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+# Set Fira Code nerd font
+defaults write com.googlecode.iterm2 "Normal Font" -string "FiraCodeNerdFontComplete-Retina"
+defaults write com.googlecode.iterm2 "Non Ascii Font" -string "FiraCodeNerdFontComplete-Retina"
 
 ###############################################################################
 # Time Machine                                                                #
