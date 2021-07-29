@@ -72,5 +72,8 @@ brew install tree
 brew install vbindiff
 brew install zopfli
 
+# Install micro editor
+brew install micro
+
 # Remove outdated versions from the cellar.
 brew cleanup
