@@ -75,5 +75,8 @@ brew install zopfli
 # Install micro editor
 brew install micro
 
+# Install volta for JS toolchain management
+brew install volta
+
 # Remove outdated versions from the cellar.
 brew cleanup
