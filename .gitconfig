@@ -99,6 +99,8 @@
 	# https://git-scm.com/docs/git-update-index#_untracked_cache
 	untrackedCache = true
 
+	  editor = micro
+
 [color]
 
 	# Use colors in Git commands that are capable of colored output when
@@ -130,9 +132,13 @@
 	# gpgsign = true
 
 [diff]
+    tool = vscode
 
 	# Detect copies as well as renames.
 	renames = copies
+
+[difftool "vscode"]
+    cmd = "code --wait --diff  "
 
 [diff "bin"]
 
@@ -145,9 +151,16 @@
 	autocorrect = 1
 
 [merge]
+    tool = vscode
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+
+	# MUCH better conflict style
+	conflictstyle = diff3
+
+[mergetool "vscode"]
+    cmd = "code --wait "
 
 [push]
 
