@@ -33,6 +33,9 @@ brew install bash-completion2
 #   chsh -s "${BREW_PREFIX}/bin/bash";
 # fi;
 
+# install fish shell
+brew install fish
+
 # Install starship prompt
 brew install starship
 
